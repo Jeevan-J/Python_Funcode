@@ -1,0 +1,12 @@
+#In this file, we will write the code for checking whether a given number is perfect square or not.
+#Simple logic is that Every perfect square number is sum of consecutive odd numbers.
+#For example, 9 = 1 + 3 + 5; 25 = 1 + 3 + 5 + 7 + 9
+num = int(input("please enter a number:"));  #Take an integer as input
+i = 1;                                       #Initialize i = 1, because it is least odd number.
+while(num>0):                                #If num is greater than 0, loop runs
+    num=num-i;                               #We substract odd numbers in sequence till we get number less than or equal to zero.
+    i=i+2;                                   #We increment i by 2, because we have to substract odd numbers in sequence.
+if(num==0):                                  #If final num is equal to zero, then the number is perfect square, because we have only substracted odd numbers from 1 to given number.
+    print("True");                           #prints a string "True"
+else:
+    print("False");
